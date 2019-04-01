@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+
+	 .button {
+ 		 background-color: #e7e7e7;
+ 		 border-radius: : 4px;
+ 		 color: black;
+ 		 padding: 15px 230px;
+ 		 font-size: 16px;
+		}
+	.wrapper {
+    	text-align: center;
+		}
+</style>
+
+<h1 class="wrapper">Local Database Application</h1>
+<div class="wrapper">
+	<form action="/database" method="post">
+		<button class="button" type="submit">Access Database</button>	
+	</form>
+</div>
+{% endblock content %}

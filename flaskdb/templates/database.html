@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+	
+	table, th{
+	  border: 1px solid black;
+	}
+	td{
+		border: 1px solid black;
+		width:auto;
+		height:100px;
+		overflow-y: scroll;
+	}
+	img{
+		width: 300px;
+		height: 300px;
+	}
+
+</style>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<table style="width:100%">
+	<tr>
+		<th>Title</th>
+		<th>Rating</th>
+		<th>Description</th>
+		<th>Image</th>
+		<th>Url</th>
+	</tr>
+	{% for product in products%}
+	<tr>
+		<td>{{product.title}}</td>
+		<td>{{product.star_rating}}</td>
+		<td>{{product.description}}</td>
+		<td>
+			<img src="{{product.main_image}}">
+		</td>
+		<td>
+			<a href="{{product.url}}"> Product Website </a>
+		</td>
+	{% endfor %}
+	</tr>
+</table>
+
+{% endblock content %}
+
+
