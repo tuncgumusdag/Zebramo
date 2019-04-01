@@ -38,11 +38,10 @@ Environment and packages:
 6. In flaskdb package, crawl.py used to get the product information, models is used for flask admin views and database tables, routes is used to declare informations for the pages in the flask webpage.
 
 ## Step-by-Step
-1. Use testProject as virtual environment.
-2. Execute run.py by either python or gunicorn.
+1. Use testProject as virtual environment. ````source testProject/bin/activate````
+2. Execute run.py by either python or gunicorn. ````python3 run.py | gunicorn -t 500 run:app````
 3. Wait for program to crawl and get the information into a designated local database.
-4. Enter the flask web application.
-5. It will deploy itself on localhost:8000, either use localhost:8000 and click on Access Database button or use localhost:8000/admin and open Products tab to view the database.
+4. Enter the flask web application, it will deploy itself on localhost:5000(when executed with python) or on localhost:8000(when executed with gunicorn), either use localhost:8000 and click on Access Database button or use localhost:8000/admin and open Products tab to view the database.
 
 
 
